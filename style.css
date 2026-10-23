@@ -108,3 +108,64 @@ a:hover { color: var(--yellow); }
   align-items: center;
   padding: 2rem 0 3rem;
 }
+
+/* ===== Tlačítka, sekce, karty, fakta ===== */
+.btn {
+  display: inline-block;
+  margin: 1rem .6rem 0 0;
+  padding: .7rem 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: .85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-decoration: none;
+  color: #000;
+  background: var(--yellow);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  transition: transform .2s, background .2s;
+}
+
+.btn:hover { background: var(--pink); color: #fff; transform: translateY(-2px); }
+
+.section { margin: 3rem 0; scroll-margin-top: 90px; }
+
+.split { display: grid; gap: 2rem; align-items: center; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid rgba(0, 240, 255, .25);
+  border-left: 4px solid var(--pink);
+  padding: 1.2rem 1.4rem;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover { transform: translateY(-4px); box-shadow: 0 0 22px rgba(255, 42, 109, .35); }
+.card h3 { margin-top: 0; }
+
+.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: .5rem 1.5rem;
+  background: var(--panel);
+  border: 1px solid rgba(252, 238, 10, .35);
+  padding: 1.4rem;
+  margin: 0;
+}
+
+.facts dt {
+  font-family: "Orbitron", sans-serif;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--yellow);
+}
+
+.facts dd { margin: 0; }
