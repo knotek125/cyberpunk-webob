@@ -1,0 +1,57 @@
+/* ===== Základ: barvy, písma, pozadí ===== */
+:root {
+  --bg: #0a0a12;
+  --panel: #161628;
+  --yellow: #fcee0a;
+  --cyan: #00f0ff;
+  --pink: #ff2a6d;
+  --purple: #7b2cff;
+  --text: #e6e6f2;
+  --muted: #9a9ab5;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Rajdhani", "Segoe UI", Arial, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 0%, #2a0b4d 0%, transparent 45%),
+    radial-gradient(circle at 90% 30%, #3d0a2e 0%, transparent 40%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem; }
+
+h1, h2, h3 {
+  font-family: "Orbitron", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: var(--yellow);
+  text-shadow: 0 0 10px rgba(252, 238, 10, .6), 0 0 30px rgba(252, 238, 10, .3);
+  margin: 0 0 .5rem;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: var(--cyan);
+  text-shadow: 0 0 12px rgba(0, 240, 255, .5);
+}
+
+h3 { font-size: 1.1rem; color: var(--pink); }
+
+a { color: var(--cyan); }
+a:hover { color: var(--yellow); }
+
+.lead { font-size: 1.3rem; max-width: 44rem; }
