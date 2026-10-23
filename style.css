@@ -306,3 +306,44 @@ img { max-width: 100%; height: auto; display: block; }
 
 .site-footer p { margin: .3rem 0; }
 .site-footer a { margin: 0 .4rem; }
+
+/* ===== Animace, scanlines a responzivita ===== */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .18) 0, rgba(0, 0, 0, .18) 1px, transparent 1px, transparent 3px);
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 100% { opacity: 1; }
+  20%, 22% { opacity: .35; }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.logo span { animation: flicker 4s infinite; }
+h1:hover { animation: glitch .3s linear infinite; }
+
+@media (max-width: 800px) {
+  .hero,
+  .split { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: 1fr; }
+  .facts dd { margin-bottom: .6rem; }
+  .site-header { justify-content: center; text-align: center; }
+  .ai-table th { width: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
