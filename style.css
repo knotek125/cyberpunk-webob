@@ -55,3 +55,56 @@ a { color: var(--cyan); }
 a:hover { color: var(--yellow); }
 
 .lead { font-size: 1.3rem; max-width: 44rem; }
+
+/* ===== Hlavička, menu a hero ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: .9rem 1.5rem;
+  background: rgba(10, 10, 18, .88);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--yellow);
+  box-shadow: 0 4px 24px rgba(252, 238, 10, .15);
+}
+
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: .12em;
+  color: var(--yellow);
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(252, 238, 10, .6);
+}
+
+.logo span { color: var(--pink); text-shadow: 0 0 10px rgba(255, 42, 109, .7); }
+
+.main-nav { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+.main-nav a {
+  font-family: "Orbitron", sans-serif;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-decoration: none;
+  color: var(--text);
+  padding: .5rem .9rem;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  transition: background .2s, color .2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active { color: #000; background: var(--cyan); }
+
+.hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0 3rem;
+}
