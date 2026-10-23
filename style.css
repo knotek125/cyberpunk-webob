@@ -217,3 +217,15 @@ img { max-width: 100%; height: auto; display: block; }
   text-transform: uppercase;
   margin-bottom: .2rem;
 }
+
+/* ===== Efekty po najetí myší ===== */
+.gallery figure { transition: transform .25s, box-shadow .25s, border-color .25s; }
+
+.gallery figure:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: var(--pink);
+  box-shadow: 0 0 28px rgba(255, 42, 109, .5);
+}
+
+.gallery img { transition: filter .25s; }
+.gallery figure:hover img { filter: saturate(1.4) contrast(1.1); }
