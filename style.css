@@ -292,3 +292,17 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .todo { color: var(--muted); font-style: italic; }
+
+/* ===== Patička ===== */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 2px solid var(--pink);
+  background: rgba(10, 10, 18, .9);
+  font-size: 1rem;
+}
+
+.site-footer p { margin: .3rem 0; }
+.site-footer a { margin: 0 .4rem; }
