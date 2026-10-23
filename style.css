@@ -240,3 +240,55 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .check-list li::before { content: "\25B6"; position: absolute; left: 0; color: var(--pink); }
+
+/* ===== Stránka Zdroje ===== */
+.source-list { padding-left: 1.2rem; }
+.source-list li { margin: .6rem 0; }
+
+.ai-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: var(--panel);
+}
+
+.ai-table th,
+.ai-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: .7rem 1rem;
+  border: 1px solid rgba(0, 240, 255, .25);
+}
+
+.ai-table th {
+  width: 12rem;
+  color: var(--yellow);
+  font-family: "Orbitron", sans-serif;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.prompt-list { counter-reset: p; list-style: none; padding: 0; }
+
+.prompt-list li {
+  counter-increment: p;
+  position: relative;
+  background: var(--panel);
+  border: 1px solid rgba(255, 42, 109, .35);
+  padding: 1rem 1rem 1rem 3.2rem;
+  margin: .8rem 0;
+}
+
+.prompt-list li::before {
+  content: counter(p);
+  position: absolute;
+  left: 1rem;
+  top: .8rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: var(--pink);
+}
+
+.todo { color: var(--muted); font-style: italic; }
